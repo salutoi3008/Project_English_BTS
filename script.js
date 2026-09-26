@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-
   // === Accordéon des risques : une seule carte ouverte à la fois ===
   const riskHeaders = document.querySelectorAll('.risk-header');
 
@@ -23,33 +22,39 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // === Modales (Help + More infos) : fonction générique réutilisable ===
+  function setupModal(btnId, modalId, closeId) {
+    const btn = document.getElementById(btnId);
+    const modal = document.getElementById(modalId);
+    const closeBtn = document.getElementById(closeId);
+    if (!btn || !modal) return;
 
-
-  // === Modale Help ===
-  const helpBtn = document.getElementById('helpBtn');
-  const helpModal = document.getElementById('helpModal');
-  const helpModalClose = document.getElementById('helpModalClose');
-
-  // Ouvre l'aide //
-  if (helpBtn && helpModal) {
-    helpBtn.addEventListener('click', () => {
-      helpModal.classList.add('is-open');
+    btn.addEventListener('click', () => {
+      modal.classList.add('is-open');
     });
-  }
-
-  // Ferme l'aide avec la croix //
-  if (helpModalClose) {
-    helpModalClose.addEventListener('click', () => {
-      helpModal.classList.remove('is-open');
-    });
-  }
-
-  // Ferme l'aide en cliquant hors de l'aide // 
-  if (helpModal) {
-    helpModal.addEventListener('click', e => {
-      if (e.target === helpModal || e.target.classList.contains('help-modal__backdrop')) {
-        helpModal.classList.remove('is-open');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', () => {
+        modal.classList.remove('is-open');
+      });
+    }
+    modal.addEventListener('click', e => {
+      if (e.target === modal || e.target.classList.contains('help-modal__backdrop')) {
+        modal.classList.remove('is-open');
       }
+    });
+  }
+
+  setupModal('helpBtn', 'helpModal', 'helpModalClose');
+  setupModal('infoBtn', 'infoModal', 'infoModalClose');
+
+  // === Bouton Retour en haut ===
+  const backToTop = document.getElementById('backToTop');
+  if (backToTop) {
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('is-visible', window.scrollY > 500);
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
 

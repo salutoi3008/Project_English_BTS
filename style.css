@@ -142,6 +142,15 @@ body{
 }
 .help-btn:hover{ filter:brightness(1.1) }
 
+.info-btn{
+  right:150px;
+  background:var(--risk-color);
+}
+
+@media (max-width:640px){
+  .info-btn{ right:auto; left:16px }
+}
+
 /* ===================== MODAL HELP ===================== */
 .help-modal{
   position:fixed; inset:0; z-index:10001;
@@ -173,4 +182,32 @@ body{
 /* ===================== RESPONSIVE ===================== */
 @media (max-width:640px){
   .help-btn{ padding:10px 14px; font-size:14px }
+}
+
+/* ===================== BACK TO TOP ===================== */
+#backToTop{
+  position:fixed;
+  right:16px;
+  bottom:70px;
+  width:44px;
+  height:44px;
+  display:grid;
+  place-items:center;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:var(--panel);
+  color:var(--text);
+  font-weight:800;
+  cursor:pointer;
+  box-shadow:var(--shadow);
+  z-index:9999;
+  opacity:0;
+  pointer-events:none;
+  transform:translateY(8px);
+  transition:opacity .2s ease, transform .2s ease;
+}
+#backToTop.is-visible{
+  opacity:1;
+  pointer-events:auto;
+  transform:translateY(0)
 }
