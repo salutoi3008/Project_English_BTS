@@ -1,0 +1,176 @@
+/* ===================== THEME & TOKENS (repris du site Black Goku) ===================== */
+:root[data-theme="dark"],
+:root:not([data-theme]){
+  --bg:#0b0d12;
+  --text:#e7edf6;
+  --muted:#9aa6b2;
+  --brand:#5dd3ff;
+  --accent:#7cf3c6;
+  --panel:#121725;
+  --panel-2:#1a2031;
+  --line:#2a334a;
+  --radius:16px;
+  --shadow:0 12px 30px rgba(0,0,0,.25);
+  --ring: rgba(128,255,234,.35);
+  --risk-color: #2563eb;
+  --help-color: #d92626;
+}
+
+*{ box-sizing:border-box }
+html,body{ height:100% }
+body{
+  margin:0;
+  font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(1100px 700px at 90% -10%, rgba(125,242,203,.12), transparent 60%),
+    radial-gradient(900px 600px at -5% 15%, rgba(93,211,255,.12), transparent 60%),
+    var(--bg);
+}
+
+.container{ max-width:1080px; margin-inline:auto; padding:24px }
+
+/* ===================== HERO ===================== */
+.hero{
+  text-align:center;
+  padding:48px 0 24px;
+}
+.hero h1{ font-size:clamp(28px, 5vw, 44px); margin:0 }
+
+/* ===================== PANELS & CARDS ===================== */
+.card{
+  background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,0));
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:18px;
+  box-shadow:var(--shadow);
+}
+
+.grid{
+  display:grid;
+  gap:16px;
+  margin-top:12px;
+  grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+  align-items:stretch;
+}
+
+.media{ padding:0 }
+.media__ph{
+  position:relative;
+  height:160px;
+  border-radius:var(--radius) var(--radius) 0 0;
+  border-bottom:1px solid var(--line);
+  background:
+    linear-gradient(135deg, rgba(93,211,255,.35), rgba(124,243,198,.35)),
+    linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,0));
+  background-size:cover;
+  background-position:center;
+}
+.media__overlay{
+  position:absolute; top:50%; left:50%;
+  transform:translate(-50%,-50%);
+  max-width:80%; max-height:80%;
+  object-fit:contain;
+}
+.media figcaption{ padding:10px 14px; color:var(--muted) }
+
+/* ===================== ACCORDÉON RISQUES ===================== */
+.risk-list{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  margin-top:12px;
+}
+
+.risk-card{
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  overflow:hidden;
+  background:var(--panel);
+}
+
+.risk-header{
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 18px;
+  border:0;
+  cursor:pointer;
+  background:var(--risk-color);
+  color:#fff;
+  font-weight:700;
+  font-size:15px;
+}
+
+.risk-chevron{
+  transition:transform .25s ease;
+}
+.risk-card.open .risk-chevron{
+  transform:rotate(180deg);
+}
+
+.risk-body{
+  overflow:hidden;
+  max-height:0;
+  transition:max-height .35s ease;
+  background:var(--panel-2);
+}
+.risk-body p{
+  margin:0;
+  padding:16px 18px;
+  color:var(--text);
+}
+.risk-card.open .risk-body{
+  max-height:600px;
+}
+
+/* ===================== BOUTON HELP ===================== */
+.help-btn{
+  position:fixed;
+  right:16px;
+  bottom:16px;
+  padding:12px 18px;
+  border:0;
+  border-radius:999px;
+  background:var(--help-color);
+  color:#fff;
+  font-weight:700;
+  cursor:pointer;
+  box-shadow:var(--shadow);
+  z-index:9999;
+}
+.help-btn:hover{ filter:brightness(1.1) }
+
+/* ===================== MODAL HELP ===================== */
+.help-modal{
+  position:fixed; inset:0; z-index:10001;
+  display:none;
+  place-items:center;
+}
+.help-modal.is-open{ display:grid }
+.help-modal__backdrop{
+  position:absolute; inset:0;
+  background:rgba(0,0,0,.75);
+}
+.help-modal__content{
+  position:relative;
+  width:min(480px, 92vw);
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:24px;
+  box-shadow:var(--shadow);
+}
+.help-modal__close{
+  position:absolute;
+  top:12px; right:14px;
+  background:none; border:none;
+  color:var(--text); font-size:22px;
+  cursor:pointer;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width:640px){
+  .help-btn{ padding:10px 14px; font-size:14px }
+}

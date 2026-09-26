@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Sensibilisation aux risques professionnels : présentation et prévention.">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>Sensibilisation aux Risques</title>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="hero">
+    <div class="container hero__content">
+      <h1>Sensibilisation aux Risques</h1>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- ===== INTRO ===== -->
+    <section class="intro card">
+      <h2>Introduction</h2>
+      <p>
+
+        <!--  texte d'intro : contexte, objectif de la page, à qui elle s'adresse. -->
+        Cette page présente les principaux risques professionnels rencontrés sur le terrain,
+        ainsi que les bonnes pratiques de prévention à adopter au quotidien.
+      </p>
+    </section>
+
+
+    
+    <!-- ===== AFFICHES ===== -->
+    <section id="affiches">
+      <h2>Affiches sur les différents types de risques</h2>
+      <div class="grid gallery">
+        <figure class="card media">
+          <div class="media__ph"><img src="img/affiche1.jpg" alt="Affiche risque 1" class="media__overlay"></div>
+          <figcaption>Affiche 1</figcaption>
+        </figure>
+        <figure class="card media">
+          <div class="media__ph"><img src="img/affiche2.jpg" alt="Affiche risque 2" class="media__overlay"></div>
+          <figcaption>Affiche 2</figcaption>
+        </figure>
+        <figure class="card media">
+          <div class="media__ph"><img src="img/affiche3.jpg" alt="Affiche risque 3" class="media__overlay"></div>
+          <figcaption>Affiche 3</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== DIFFERENT RISKS (accordéon) ===== -->
+    <section id="risks">
+      <h2>Different Risks</h2>
+
+      <div class="risk-list">
+
+        <div class="risk-card">
+          <button class="risk-header" aria-expanded="false" aria-controls="risk1">
+            <span>Risk 1</span>
+            <span class="risk-chevron">▾</span>
+          </button>
+          <div class="risk-body" id="risk1">
+            <p>
+
+
+              <!-- Texte du risque 1 -->
+              Texte complet décrivant le risque 1 : nature du danger, situations à risque,
+              conséquences possibles et mesures de prévention associées.
+            </p>
+          </div>
+        </div>
+
+        <div class="risk-card">
+          <button class="risk-header" aria-expanded="false" aria-controls="risk2">
+            <span>Risk 2</span>
+            <span class="risk-chevron">▾</span>
+          </button>
+          <div class="risk-body" id="risk2">
+            <p>
+
+
+              <!--Texte du risque 2 -->
+              Texte complet décrivant le risque 2 : nature du danger, situations à risque,
+              conséquences possibles et mesures de prévention associées.
+            </p>
+          </div>
+        </div>
+
+        <div class="risk-card">
+          <button class="risk-header" aria-expanded="false" aria-controls="risk3">
+            <span>Risk 3</span>
+            <span class="risk-chevron">▾</span>
+          </button>
+          <div class="risk-body" id="risk3">
+            <p>
+
+
+              <!-- Texte du risque 3 -->
+              Texte complet décrivant le risque 3 : nature du danger, situations à risque,
+              conséquences possibles et mesures de prévention associées.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ===== BOUTON HELP ===== -->
+  <button id="helpBtn" class="help-btn" aria-label="Aide">Bouton Help</button>
+
+
+  <!-- ===== MODAL HELP ===== -->
+  <div id="helpModal" class="help-modal">
+    <div class="help-modal__backdrop"></div>
+    <div class="help-modal__content">
+      <button id="helpModalClose" class="help-modal__close" aria-label="Fermer">×</button>
+      <h3>Aide</h3>
+      <p>
+        <!-- Remplace par le texte d'aide réel -->
+        Cliquez sur un titre "Risk" pour dérouler son contenu. Un seul risque peut être
+        ouvert à la fois.
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>
