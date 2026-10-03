@@ -37,22 +37,26 @@
 
     <!-- ===== AFFICHES ===== -->
     <section id="affiches">
-      <h2>Affiches sur les différents types de risques</h2>
+      <h2>Posters on the different types of risks</h2>
       <div class="grid gallery">
+
         <figure class="card media">
-          <div class="media__ph"><img src="img/affiche1.jpg" alt="Affiche risque 1" class="media__overlay"></div>
+          <div class="media__ph"><img src="img/risk_muscu.png" alt="Affiche risque 1" class="media__overlay zoomable"></div>
           <figcaption>Affiche 1</figcaption>
         </figure>
+
         <figure class="card media">
-          <div class="media__ph"><img src="img/affiche2.jpg" alt="Affiche risque 2" class="media__overlay"></div>
-          <figcaption>Affiche 2</figcaption>
+          <div class="media__ph"><img src="img/PsychologicalRisk.jpg" alt="Affiche risque 2" class="media__overlay zoomable"></div>
+          <figcaption>Stress at Work </figcaption>
         </figure>
+
         <figure class="card media">
-          <div class="media__ph"><img src="img/affiche3.jpg" alt="Affiche risque 3" class="media__overlay"></div>
+          <div class="media__ph"><img src="img/affiche3.jpg" alt="Affiche risque 3" class="media__overlay zoomable"></div>
           <figcaption>Affiche 3</figcaption>
         </figure>
       </div>
     </section>
+
 
     <!-- ===== DIFFERENT RISKS (accordéon) ===== -->
     <section id="risks">
@@ -102,13 +106,41 @@
           </div>
         </div>
 
+        <div class="risk-card">
+          <button class="risk-header" aria-expanded="false" aria-controls="risk2">
+            <span>Risk 4</span>
+            <span class="risk-chevron">▾</span>
+          </button>
+          <div class="risk-body" id="risk2">
+            <p>
+              <!-- Remplace par le texte complet du risque 2 -->
+              Texte complet décrivant le risque 4 : nature du danger, situations à risque,
+              conséquences possibles et mesures de prévention associées.
+            </p>
+          </div>
+        </div>
+
+        <div class="risk-card">
+          <button class="risk-header" aria-expanded="false" aria-controls="risk2">
+            <span>Risk 5</span>
+            <span class="risk-chevron">▾</span>
+          </button>
+          <div class="risk-body" id="risk2">
+            <p>
+              <!-- Remplace par le texte complet du risque 2 -->
+              Texte complet décrivant le risque 5 : nature du danger, situations à risque,
+              conséquences possibles et mesures de prévention associées.
+            </p>
+          </div>
+        </div>
+
       </div>
     </section>
 
   </main>
 
   <!-- ===== BOUTON HELP ===== -->
-  <button id="helpBtn" class="help-btn" aria-label="Aide">Bouton Help</button>
+  <button id="helpBtn" class="help-btn" aria-label="Aide">Button Help</button>
 
   <!-- ===== BOUTON MORE INFOS ===== -->
   <button id="infoBtn" class="help-btn info-btn" aria-label="Plus d'informations">More infos</button>
@@ -118,11 +150,10 @@
     <div class="help-modal__backdrop"></div>
     <div class="help-modal__content">
       <button id="helpModalClose" class="help-modal__close" aria-label="Fermer">×</button>
-      <h3>Aide</h3>
+      <h3>HELP</h3>
       <p>
-        <!-- Remplace par le texte d'aide réel -->
-        Cliquez sur un titre "Risk" pour dérouler son contenu. Un seul risque peut être
-        ouvert à la fois.
+        <!-- texte d'aide  -->
+        Click on a "Risks" title to show its content. Only one Risk can be open at a time.
       </p>
     </div>
   </div>
@@ -132,14 +163,23 @@
     <div class="help-modal__backdrop"></div>
     <div class="help-modal__content">
       <button id="infoModalClose" class="help-modal__close" aria-label="Fermer">×</button>
-      <h3>À propos de cette page</h3>
+      <h3>About this page</h3>
       <p>Auteur : <strong>Enzo Lethiais</strong></p>
-      <p>Version : <strong>1.2</strong></p>
+      <p>Version : <strong>1.4</strong></p>
+      <a href="https://github.com/salutoi3008/Project_English_BTS"
+         target="_blank" rel="noopener noreferrer" class="github-link">
+        <strong>Dépôt Github</strong>
+        </a>
     </div>
   </div>
 
   <!-- Bouton Retour en haut -->
   <button id="backToTop" aria-label="Retour en haut">↑</button>
+
+  <!-- Overlay zoom images -->
+  <div id="overlay" aria-hidden="true">
+    <img id="overlay-img" src="" alt="Affiche agrandie">
+  </div>
 
 </body>
 </html>

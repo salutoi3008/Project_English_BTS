@@ -58,4 +58,29 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // ============================================================
+  // OVERLAY ZOOM — Agrandissement des images au clic
+  // ============================================================
+
+  const overlay    = document.getElementById('overlay');
+  const overlayImg = document.getElementById('overlay-img');
+
+  if (overlay && overlayImg) {
+    document.querySelectorAll('.zoomable').forEach(img => {
+      img.addEventListener('click', () => {
+        overlayImg.src = img.src;
+        overlay.classList.add('show');
+      });
+    });
+
+    overlay.addEventListener('click', () => overlay.classList.remove('show'));
+
+    // Fermeture avec la touche Échap
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') overlay.classList.remove('show');
+    });
+  }
+
 });
+
+
