@@ -4,14 +4,11 @@
   --bg:#0b0d12;
   --text:#e7edf6;
   --muted:#9aa6b2;
-  --brand:#5dd3ff;
-  --accent:#7cf3c6;
   --panel:#121725;
   --panel-2:#1a2031;
   --line:#2a334a;
   --radius:16px;
   --shadow:0 12px 30px rgba(0,0,0,.25);
-  --ring: rgba(128,255,234,.35);
   --risk-color: #2563eb;
   --help-color: #d92626;
 }
@@ -144,6 +141,9 @@ body{
   transition:max-height .35s ease;
   background:var(--panel-2);
 }
+.risk-body > div{ padding:16px 18px }
+.risk-body ul{ margin:8px 0 16px 20px; padding:0 }
+.risk-body img{ max-width:100%; height:auto; border-radius:8px; margin:16px 0; display:block }
 .risk-body p{
   margin:0;
   padding:16px 18px;
@@ -175,23 +175,16 @@ body{
   background:var(--risk-color);
 }
 
-@media (max-width:640px){
-  .info-btn{ right:auto; left:16px }
-}
-
-
 /* ===================== Bouton Sources ==================*/
 .sources-btn{
-  right: 290px;                 /* à gauche de "More infos" */
-  background: #0f766e;          /* couleur différente (teal) */
+  right: 290px;                 
+  background: #0f766e;          
 }
 
-@media (max-width: 640px){
-  .sources-btn{
-    right: auto;
-    left: 16px;
-    bottom: 70px;               
-  }
+@media (max-width:640px){
+  .help-btn{ padding:10px 14px; font-size:14px }
+  .info-btn{ right:auto; left:16px }
+  .sources-btn{ right:auto; left:16px; bottom:70px }
 }
 
 /* ===================== MODAL HELP ===================== */
@@ -222,13 +215,6 @@ body{
   cursor:pointer;
 }
 
-
-
-/* ===================== RESPONSIVE ===================== */
-@media (max-width:640px){
-  .help-btn{ padding:10px 14px; font-size:14px }
-}
-
 /* ===================== BACK TO TOP ===================== */
 #backToTop{
   position:fixed;
@@ -256,83 +242,13 @@ body{
   pointer-events:auto;
   transform:translateY(0)
 }
-/* ====== SECTION 05 — IMAGES ================== */
-
-.image-intro {
-  margin-bottom: 40px;
-}
-
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 12px;
-  margin-top: 40px;
-}
-
-.image-box {
-  position: relative;
-  overflow: hidden;
-  background: var(--bg-alt);
-  border: 1px solid rgba(57,255,20,0.08);
-  min-height: 280px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 2px;
-}
-
-.image-box:first-child {
-  grid-column: 1 / -1;
-  min-height: 440px;
-}
-
-.image-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;      /* image entière visible */
-  object-position: center;
-  padding: 20px;
-  box-sizing: border-box;
-  background: #0b0e1a;
-  transition: transform 0.5s ease;
-}
-
-.image-box:hover img {
-  transform: scale(1.04);
-}
-
-/* === CAPTIONS === */
-.image-caption {
-  position: absolute;
-  bottom: 0; 
-  left: 0; 
-  right: 0;
-  padding: 16px 20px;
-  background: linear-gradient(transparent, rgba(8,10,20,0.95));
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--ice);
-  transform: translateY(100%);
-  transition: transform 0.4s ease;
-  opacity: 0.95;
-}
-
-.image-box:hover .image-caption {
-  transform: translateY(0);
-}
-
-/* On enlève le display:none */
-.image-box > p { display: block; }
-
 /* ===================== OVERLAY ZOOM ===================== */
 .zoomable{ cursor:zoom-in }
 
 #overlay{
   position:fixed;
   inset:0;
-  z-index:10002;          /* au-dessus des boutons Help (9999) et des modales (10001) */
+  z-index:10002;          
   display:none;
   place-items:center;
   background:rgba(0,0,0,.85);

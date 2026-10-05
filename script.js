@@ -1,12 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   // === Accordéon des risques : une seule carte ouverte à la fois ===
-  const riskHeaders = document.querySelectorAll('.risk-header');
-
-  riskHeaders.forEach(header => {
+  document.querySelectorAll('.risk-header').forEach(header => {
     header.addEventListener('click', () => {
       const card = header.closest('.risk-card');
-      const isAlreadyOpen = card.classList.contains('open');
+      const open = !card.classList.contains('open');
 
       // Ferme toutes les cartes
       document.querySelectorAll('.risk-card').forEach(c => {
@@ -15,38 +13,28 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       // Rouvre celle-ci seulement si elle n'était pas déjà ouverte
-      if (!isAlreadyOpen) {
-        card.classList.add('open');
-        header.setAttribute('aria-expanded', 'true');
-      }
+      card.classList.toggle('open', open);
+      header.setAttribute('aria-expanded', open);
     });
   });
 
-  // === Modales (Help + More infos) : fonction générique réutilisable ===
-  function setupModal(btnId, modalId, closeId) {
+  // === Modales (Help + More infos + Sources) ===
+  function setupModal(btnId, modalId) {
     const btn = document.getElementById(btnId);
     const modal = document.getElementById(modalId);
-    const closeBtn = document.getElementById(closeId);
     if (!btn || !modal) return;
 
-    btn.addEventListener('click', () => {
-      modal.classList.add('is-open');
-    });
-    if (closeBtn) {
-      closeBtn.addEventListener('click', () => {
-        modal.classList.remove('is-open');
-      });
-    }
+    btn.addEventListener('click', () => modal.classList.add('is-open'));
     modal.addEventListener('click', e => {
-      if (e.target === modal || e.target.classList.contains('help-modal__backdrop')) {
+      if (e.target.matches('.help-modal, .help-modal__backdrop, .help-modal__close')) {
         modal.classList.remove('is-open');
       }
     });
   }
 
-  setupModal('helpBtn', 'helpModal', 'helpModalClose');
-  setupModal('infoBtn', 'infoModal', 'infoModalClose');
-  setupModal('sourcesBtn', 'sourcesModal', 'sourcesModalClose');
+  setupModal('helpBtn', 'helpModal');
+  setupModal('infoBtn', 'infoModal');
+  setupModal('sourcesBtn', 'sourcesModal');
 
   // === Bouton Retour en haut ===
   const backToTop = document.getElementById('backToTop');
@@ -59,10 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ============================================================
-  // OVERLAY ZOOM — Agrandissement des images au clic
-  // ============================================================
-
+  // === Overlay zoom : agrandissement des images au clic ===
   const overlay    = document.getElementById('overlay');
   const overlayImg = document.getElementById('overlay-img');
 
@@ -83,5 +68,3 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 });
-
-
