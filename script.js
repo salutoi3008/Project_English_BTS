@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setupModal('helpBtn', 'helpModal', 'helpModalClose');
   setupModal('infoBtn', 'infoModal', 'infoModalClose');
+  setupModal('sourcesBtn', 'sourcesModal', 'sourcesModalClose');
 
   // === Bouton Retour en haut ===
   const backToTop = document.getElementById('backToTop');

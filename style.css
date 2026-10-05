@@ -150,7 +150,7 @@ body{
   color:var(--text);
 }
 .risk-card.open .risk-body{
-  max-height:600px;
+  max-height : 2000px ;
 }
 
 /* ===================== BOUTON HELP ===================== */
@@ -177,6 +177,21 @@ body{
 
 @media (max-width:640px){
   .info-btn{ right:auto; left:16px }
+}
+
+
+/* ===================== Bouton Sources ==================*/
+.sources-btn{
+  right: 290px;                 /* à gauche de "More infos" */
+  background: #0f766e;          /* couleur différente (teal) */
+}
+
+@media (max-width: 640px){
+  .sources-btn{
+    right: auto;
+    left: 16px;
+    bottom: 70px;               
+  }
 }
 
 /* ===================== MODAL HELP ===================== */
@@ -206,6 +221,8 @@ body{
   color:var(--text); font-size:22px;
   cursor:pointer;
 }
+
+
 
 /* ===================== RESPONSIVE ===================== */
 @media (max-width:640px){

@@ -35,6 +35,7 @@
       </p>
     </section>
 
+
     <!-- ===== AFFICHES ===== -->
     <section id="affiches">
       <h2>Posters on the different types of risks</h2>
@@ -46,7 +47,7 @@
         </figure>
 
         <figure class="card media">
-          <div class="media__ph"><img src="img/PsychologicalRisk.jpg" alt="Affiche risque 2" class="media__overlay zoomable"></div>
+          <div class="media__ph"><img src="img/stress at work.png" alt="Affiche risque 2" class="media__overlay zoomable"></div>
           <figcaption>Stress at Work </figcaption>
         </figure>
 
@@ -57,12 +58,19 @@
       </div>
     </section>
 
+      <!-- Overlay zoom images -->
+       <div id="overlay" aria-hidden="true">
+      <img id="overlay-img" src="" alt="Affiche agrandie">
+       </div>
+
 
     <!-- ===== DIFFERENT RISKS ===== -->
     <section id="risks">
       <h2>Different Risks</h2>
       <div class="risk-list">
 
+
+      <!-- Risque 1  -->   
         <div class="risk-card">
   <button class="risk-header" aria-expanded="false" aria-controls="risk1">
     <span>Risk 1 – Display Screen Equipment (DSE) risks</span>
@@ -71,17 +79,20 @@
   <div class="risk-body" id="risk1">
     <div style="padding: 16px 18px;">
       
+      <!-- Mini texte d'introduction  -->
       <p>
         Working for long hours on a computer, laptop or tablet can cause tired eyes, headaches, neck pain and sore wrists or shoulders.
         This often happens when the screen is too high or too low, the chair is not adjusted, or you stay in the same position for too long.
       </p>
 
+       <!-- Données trouvées pour bien illuster  -->   
       <p><strong>Key figures:</strong></p>
       <ul style="margin: 8px 0 16px 20px; padding: 0;">
         <li>Up to <strong>62%</strong> of people who work on screens report digital eye strain.</li>
         <li>More than <strong>90%</strong> of intensive screen users report muscle or joint discomfort.</li>
       </ul>
 
+       <!--  Quelques conseils pour bien prévenir le risque  -->
       <p><strong>How to protect yourself:</strong></p>
       <ul style="margin: 8px 0 16px 20px; padding: 0;">
         <li>Place the top of the screen at eye level and about an arm’s length away.</li>
@@ -90,13 +101,18 @@
         <li>Adjust your chair so your feet are flat on the floor and your back is supported.</li>
       </ul>
 
+      <!--  IMAGE  -->
+      <img src="img/correct workstation setup.png" 
+           alt="Correct workstation posture" 
+           style="max-width: 100%; height: auto; border-radius: 8px; margin: 16px 0; display: block;">
+
+
     </div>
   </div>
 </div>
 
-
+      <!--  Risque2-->
         <div class="risk-card">
-
   <button class="risk-header" aria-expanded="false" aria-controls="risk2">
     <span>Risk 2 – Work-related stress</span>
     <span class="risk-chevron">▾</span>
@@ -109,12 +125,20 @@
         It can make you feel anxious, tired, irritable or unable to sleep well. Over time it can also affect your physical health.
       </p>
 
+    
       <p><strong>Key figures:</strong></p>
       <ul style="margin: 8px 0 16px 20px; padding: 0;">
         <li><strong>964,000</strong> workers in Great Britain suffered from work-related stress, depression or anxiety in 2024/25.</li>
         <li>This caused <strong>22.1 million</strong> lost working days.</li>
         <li>Stress represents <strong>52%</strong> of all work-related ill health cases.</li>
       </ul>
+
+       <!-- IMAGE -->
+      <img src="img/Work-related stress illustration.png" 
+           alt="Work-related stress illustration" 
+           style="max-width: 100%; height: auto; border-radius: 8px; margin: 16px 0; display: block;">
+
+
 
       <p><strong>How to protect yourself:</strong></p>
       <ul style="margin: 8px 0 16px 20px; padding: 0;">
@@ -123,51 +147,131 @@
         <li>Write down what is causing the pressure and look for small changes.</li>
         <li>Ask for help or training if a task feels too difficult.</li>
       </ul>
+
     </div>
   </div>
-        </div>
+</div>
 
-        <div class="risk-card">
-          <button class="risk-header" aria-expanded="false" aria-controls="risk3">
-            <span>Risk 3</span>
-            <span class="risk-chevron">▾</span>
-          </button>
-          <div class="risk-body" id="risk3">
-            <p>
-              <!-- Remplace par le texte complet du risque 3 -->
-              Texte complet décrivant le risque 3 : nature du danger, situations à risque,
-              conséquences possibles et mesures de prévention associées.
-            </p>
-          </div>
-        </div>
+      <!-- Risque 3-->
+       <div class="risk-card">
+  <button class="risk-header" aria-expanded="false" aria-controls="risk3">
+    <span>Risk 3 – Musculoskeletal Disorders (MSDs)</span>
+    <span class="risk-chevron">▾</span>
+  </button>
+  <div class="risk-body" id="risk3">
+    <div style="padding: 16px 18px;">
+      
+      <p>
+        These are pains and injuries that affect muscles, joints, tendons or the back. 
+        They often come from repeating the same movements, staying in awkward positions, or using force for a long time.
+        Common problems are back pain, stiff neck, sore shoulders or painful wrists.
+      </p>
 
-        <div class="risk-card">
-          <button class="risk-header" aria-expanded="false" aria-controls="risk2">
-            <span>Risk 4</span>
-            <span class="risk-chevron">▾</span>
-          </button>
-          <div class="risk-body" id="risk2">
-            <p>
-              <!-- Remplace par le texte complet du risque 2 -->
-              Texte complet décrivant le risque 4 : nature du danger, situations à risque,
-              conséquences possibles et mesures de prévention associées.
-            </p>
-          </div>
-        </div>
+      <p><strong>Key figures:</strong></p>
+      <ul style="margin: 8px 0 16px 20px; padding: 0;">
+        <li><strong>511,000</strong> workers suffered from work-related musculoskeletal disorders in 2024/25.</li>
+        <li>This caused <strong>7.1 million</strong> lost working days.</li>
+        <li><strong>43%</strong> of cases affect the back and <strong>41%</strong> affect the upper limbs or neck.</li>
+      </ul>
 
+
+           <!-- IMAGE -->
+      <img src="img/Musculoskeletal disorders body map.png" 
+           alt="Musculoskeletal disorders body map" 
+           style="max-width: 100%; height: auto; border-radius: 8px; margin: 16px 0; display: block;">
+
+
+      <p><strong>How to protect yourself:</strong></p>
+      <ul style="margin: 8px 0 16px 20px; padding: 0;">
+        <li>Change position regularly – do not stay sitting or standing still for too long.</li>
+        <li>Keep tools and materials close to your body.</li>
+        <li>Stretch gently during the day.</li>
+        <li>Report any pain early so it does not become a long-term problem.</li>
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+      <!-- Risque 4 -->
         <div class="risk-card">
-          <button class="risk-header" aria-expanded="false" aria-controls="risk2">
-            <span>Risk 5</span>
-            <span class="risk-chevron">▾</span>
-          </button>
-          <div class="risk-body" id="risk2">
-            <p>
-              <!-- Remplace par le texte complet du risque 2 -->
-              Texte complet décrivant le risque 5 : nature du danger, situations à risque,
-              conséquences possibles et mesures de prévention associées.
-            </p>
-          </div>
-        </div>
+  <button class="risk-header" aria-expanded="false" aria-controls="risk4">
+    <span>Risk 4 – Manual handling & lifting</span>
+    <span class="risk-chevron">▾</span>
+  </button>
+  <div class="risk-body" id="risk4">
+    <div style="padding: 16px 18px;">
+      
+      <p>
+        Lifting, carrying, pushing or pulling objects can hurt your back, shoulders or arms if done the wrong way – even when the load is not very heavy.
+        The risk is higher when the load is awkward, when you twist your body, or when you lift from the floor or above shoulder height.
+      </p>
+
+      <!-- IMAGE -->
+      <img src="img/Correct manual handling technique.png" 
+           alt="Correct manual handling technique" 
+           style="max-width: 100%; height: auto; border-radius: 8px; margin: 16px 0; display: block;">
+
+      <p><strong>Key figures:</strong></p>
+      <ul style="margin: 8px 0 16px 20px; padding: 0;">
+        <li>Manual handling causes about <strong>17%</strong> of all non-fatal workplace injuries.</li>
+        <li>It is one of the main causes of back pain and other musculoskeletal disorders.</li>
+      </ul>
+
+      <p><strong>How to protect yourself:</strong></p>
+      <ul style="margin: 8px 0 16px 20px; padding: 0;">
+        <li>Plan the lift before you start.</li>
+        <li>Bend your knees, keep your back straight and hold the load close to your body.</li>
+        <li>Ask for help or use a trolley when the load is heavy or bulky.</li>
+        <li>Store heavy items at waist height whenever possible.</li>
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+      <!-- Risque5--> 
+        <div class="risk-card">
+  <button class="risk-header" aria-expanded="false" aria-controls="risk5">
+    <span>Risk 5 – Chemical risks</span>
+    <span class="risk-chevron">▾</span>
+  </button>
+  <div class="risk-body" id="risk5">
+    <div style="padding: 16px 18px;">
+      
+      <p>
+        Many workplaces use products that can be harmful if you breathe them, touch them, or get them in your eyes. 
+        Examples include cleaning products, solvents, paints, dusts or glues.
+        These substances can irritate the skin, cause breathing problems, or create more serious health issues over time.
+      </p>
+
+      
+      <p><strong>Key figures:</strong></p>
+      <ul style="margin: 8px 0 16px 20px; padding: 0;">
+        <li>About <strong>6,000</strong> new cases of work-related skin problems are reported each year.</li>
+        <li>Around <strong>22,000</strong> new cases of breathing or lung problems linked to work occur every year.</li>
+        <li>About <strong>11,000</strong> deaths each year are linked to past exposure to hazardous substances at work.</li>
+      </ul>
+
+      <p><strong>How to protect yourself:</strong></p>
+      <ul style="margin: 8px 0 16px 20px; padding: 0;">
+        <li>Read the label and safety instructions before using any product.</li>
+        <li>Use the right gloves, glasses or mask when needed.</li>
+        <li>Work in a well-ventilated area or use extraction systems.</li>
+        <li>Wash your hands after handling chemicals and never eat or drink near them.</li>
+        <li>Tell your supervisor if you feel any irritation or unusual symptoms.</li>
+      </ul>
+
+      <!-- IMAGE -->
+      <img src="img/Chemical hazard pictograms and protective equipment.jpg" 
+           alt="Chemical hazard pictograms and protective equipment" 
+           style="max-width: 100%; height: auto; border-radius: 8px; margin: 16px 0; display: block;">
+
+    </div>
+  </div>
+</div>
 
       </div>
     </section>
@@ -175,24 +279,35 @@
   </main>
 
 
+
   <!-- ===== BOUTON HELP ===== -->
   <button id="helpBtn" class="help-btn" aria-label="Aide">Button Help</button>
 
+
   <!-- ===== BOUTON MORE INFOS ===== -->
   <button id="infoBtn" class="help-btn info-btn" aria-label="Plus d'informations">More infos</button>
+
+  <!-- ===== BOUTON SOURCES ===== -->
+  <button id="sourcesBtn" class="help-btn sources-btn" aria-label="Sources">Sources</button>
 
   <!-- ===== MODAL HELP ===== -->
   <div id="helpModal" class="help-modal">
     <div class="help-modal__backdrop"></div>
     <div class="help-modal__content">
       <button id="helpModalClose" class="help-modal__close" aria-label="Fermer">×</button>
+      
       <h3>HELP</h3>
-      <p>
-        <!-- texte d'aide  -->
+      <li>
+        
         Click on a "Risks" title to show its content. Only one Risk can be open at a time.
-      </p>
+      </li>
+      
+      <li>
+        Clicking on "GitHub Repository" will automatically take you to the repository associated with this page.
+      </li>
     </div>
   </div>
+
 
   <!-- ===== MODAL MORE INFOS ===== -->
   <div id="infoModal" class="help-modal">
@@ -201,7 +316,7 @@
       <button id="infoModalClose" class="help-modal__close" aria-label="Fermer">×</button>
       <h3>About this page</h3>
       <p>Auteur : <strong>Enzo Lethiais</strong></p>
-      <p>Version : <strong>1.5</strong></p>
+      <p>Version : <strong>1.7</strong></p>
       <a href="https://github.com/salutoi3008/Project_English_BTS"
          target="_blank" rel="noopener noreferrer" class="github-link">
         <strong>Dépôt Github</strong>
@@ -209,13 +324,51 @@
     </div>
   </div>
 
+  <!-- ===== MODAL SOURCES ===== -->
+<div id="sourcesModal" class="help-modal">
+  <div class="help-modal__backdrop"></div>
+  <div class="help-modal__content" style="max-height: 85vh; overflow-y: auto;">
+    <button id="sourcesModalClose" class="help-modal__close" aria-label="Close">×</button>
+    <h3>Sources</h3>
+
+    <p><strong>Statistics (figures)</strong></p>
+    <ul style="margin: 8px 0 16px 18px; padding: 0; font-size: 14px;">
+      <li>
+        <strong>Stress, MSDs, overall ill health</strong><br>
+        Health and Safety Executive (HSE) – Great Britain statistics 2024/25<br>
+        <a href="https://www.hse.gov.uk/statistics/" target="_blank" rel="noopener">hse.gov.uk/statistics</a>
+      </li>
+      <li>
+        Stress details: <a href="https://www.hse.gov.uk/statistics/assets/docs/stress.pdf" target="_blank" rel="noopener">stress.pdf</a>
+      </li>
+      <li>
+        Musculoskeletal disorders: <a href="https://www.hse.gov.uk/statistics/assets/docs/msd.pdf" target="_blank" rel="noopener">msd.pdf</a>
+      </li>
+      <li>
+        Non-fatal injuries (manual handling 17%): <a href="https://www.hse.gov.uk/statistics/causinj/overview.htm" target="_blank" rel="noopener">Non-fatal injuries overview</a>
+      </li>
+      <li>
+        Skin & respiratory diseases: HSE skin and respiratory disease reports
+      </li>
+    </ul>
+
+    <p><strong>Images & posters</strong></p>
+    <ul style="margin: 8px 0 0 18px; padding: 0; font-size: 14px;">
+      <li>HSE official guidance pages (DSE posture, COSHH symbols…)</li>
+      <li>CCOHS free infographics (Workplace Stress, MSD, Safe Lifting)</li>
+      <li>EU-OSHA / ETUI posters (« Because work shouldn’t hurt »)</li>
+      <li>Official GHS hazard pictograms</li>
+      <li>Free stock illustrations (Pixabay, Unsplash) for some visuals</li>
+    </ul>
+
+    <p style="margin-top: 18px; font-size: 13px; color: var(--muted);">
+      All statistical figures are from official HSE publications (Labour Force Survey estimates for 2024/25).
+    </p>
+  </div>
+</div>
+
   <!-- Bouton Retour en haut -->
   <button id="backToTop" aria-label="Retour en haut">↑</button>
-
-  <!-- Overlay zoom images -->
-  <div id="overlay" aria-hidden="true">
-    <img id="overlay-img" src="" alt="Affiche agrandie">
-  </div>
 
 </body>
 </html>
