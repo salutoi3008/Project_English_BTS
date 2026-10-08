@@ -1,4 +1,4 @@
-/* ===================== THEME & TOKENS (repris du site Black Goku) ===================== */
+/* ===================== THEME & TOKENS (Taken from the Black Goku page) ===================== */
 :root[data-theme="dark"],
 :root:not([data-theme]){
   --bg:#0b0d12;
@@ -71,7 +71,7 @@ body{
 }
 .media figcaption{ padding:10px 14px; color:var(--muted) }
 
-/* ===================== GALERIE D'AFFICHES : affichage complet, sans recadrage ===================== */
+/* ===================== POSTER GALLERY: full display, no cropping ===================== */
 #affiches .grid{
   grid-template-columns:repeat(auto-fill, minmax(220px, 1fr));
 }
@@ -99,7 +99,7 @@ body{
   margin:0 auto;
 }
 
-/* ===================== ACCORDÉON RISQUES ===================== */
+/* ===================== RISKS ACCORDION ===================== */
 .risk-list{
   display:flex;
   flex-direction:column;
@@ -175,7 +175,7 @@ body{
   background:var(--risk-color);
 }
 
-/* ===================== Bouton Sources ==================*/
+/* ===================== Button Sources ==================*/
 .sources-btn{
   right: 290px;                 
   background: #0f766e;          

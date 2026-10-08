@@ -1,18 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  // === Accordéon des risques : une seule carte ouverte à la fois ===
+  // === Risk accordion: only one card open at a time ===
   document.querySelectorAll('.risk-header').forEach(header => {
     header.addEventListener('click', () => {
       const card = header.closest('.risk-card');
       const open = !card.classList.contains('open');
 
-      // Ferme toutes les cartes
+      // Close all cards
       document.querySelectorAll('.risk-card').forEach(c => {
         c.classList.remove('open');
         c.querySelector('.risk-header').setAttribute('aria-expanded', 'false');
       });
 
-      // Rouvre celle-ci seulement si elle n'était pas déjà ouverte
+      // Reopen it only if it wasn't already open.
       card.classList.toggle('open', open);
       header.setAttribute('aria-expanded', open);
     });
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
   setupModal('infoBtn', 'infoModal');
   setupModal('sourcesBtn', 'sourcesModal');
 
-  // === Bouton Retour en haut ===
+  // === Back-to-top button ===
   const backToTop = document.getElementById('backToTop');
   if (backToTop) {
     window.addEventListener('scroll', () => {
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // === Overlay zoom : agrandissement des images au clic ===
+  // === Overlay zoom : image enlargement on click ===
   const overlay    = document.getElementById('overlay');
   const overlayImg = document.getElementById('overlay-img');
 
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     overlay.addEventListener('click', () => overlay.classList.remove('show'));
 
-    // Fermeture avec la touche Échap
+    // Close with the Esc key
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape') overlay.classList.remove('show');
     });
